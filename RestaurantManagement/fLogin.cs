@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestaurantManagement.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,19 +11,33 @@ using System.Windows.Forms;
 
 namespace RestaurantManagement
 {
-    public partial class Login : Form
+    public partial class fLogin : Form
     {
-        public Login()
+        public fLogin()
         {
             InitializeComponent();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            TableManager m = new TableManager();
-            this.Hide();
-            m.ShowDialog();
-            this.Show();
+            string username = txbUserName.Text;
+            string password = txbPassWord.Text;
+            if (Login(username,password))
+            {
+                fTableManager m = new fTableManager();
+                this.Hide();
+                m.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu!");
+            }
+        }
+
+        bool Login(string username, string password)
+        {
+            return AccountDAO.Instance.Login(username,password);
         }
 
         private void btnExit_Click(object sender, EventArgs e)

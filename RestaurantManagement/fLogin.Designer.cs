@@ -1,6 +1,6 @@
 ﻿namespace RestaurantManagement
 {
-    partial class Login
+    partial class fLogin
     {
         /// <summary>
         /// Required designer variable.

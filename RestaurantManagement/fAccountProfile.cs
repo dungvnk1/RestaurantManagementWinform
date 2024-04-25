@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace RestaurantManagement
 {
-    public partial class AccountProfile : Form
+    public partial class fAccountProfile : Form
     {
-        public AccountProfile()
+        public fAccountProfile()
         {
             InitializeComponent();
         }

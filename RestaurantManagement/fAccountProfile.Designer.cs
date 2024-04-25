@@ -1,6 +1,6 @@
 ﻿namespace RestaurantManagement
 {
-    partial class AccountProfile
+    partial class fAccountProfile
     {
         /// <summary>
         /// Required designer variable.

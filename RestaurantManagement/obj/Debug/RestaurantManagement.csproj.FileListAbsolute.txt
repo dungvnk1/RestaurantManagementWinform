@@ -2,12 +2,12 @@ E:\Intern C#\RestaurantManagementWinform\RestaurantManagementWinform\RestaurantM
 E:\Intern C#\RestaurantManagementWinform\RestaurantManagementWinform\RestaurantManagement\bin\Debug\RestaurantManagement.exe
 E:\Intern C#\RestaurantManagementWinform\RestaurantManagementWinform\RestaurantManagement\bin\Debug\RestaurantManagement.pdb
 E:\Intern C#\RestaurantManagementWinform\RestaurantManagementWinform\RestaurantManagement\obj\Debug\RestaurantManagement.csproj.AssemblyReference.cache
-E:\Intern C#\RestaurantManagementWinform\RestaurantManagementWinform\RestaurantManagement\obj\Debug\RestaurantManagement.Login.resources
 E:\Intern C#\RestaurantManagementWinform\RestaurantManagementWinform\RestaurantManagement\obj\Debug\RestaurantManagement.Properties.Resources.resources
 E:\Intern C#\RestaurantManagementWinform\RestaurantManagementWinform\RestaurantManagement\obj\Debug\RestaurantManagement.csproj.GenerateResource.cache
 E:\Intern C#\RestaurantManagementWinform\RestaurantManagementWinform\RestaurantManagement\obj\Debug\RestaurantManagement.csproj.CoreCompileInputs.cache
 E:\Intern C#\RestaurantManagementWinform\RestaurantManagementWinform\RestaurantManagement\obj\Debug\RestaurantManagement.exe
 E:\Intern C#\RestaurantManagementWinform\RestaurantManagementWinform\RestaurantManagement\obj\Debug\RestaurantManagement.pdb
-E:\Intern C#\RestaurantManagementWinform\RestaurantManagementWinform\RestaurantManagement\obj\Debug\RestaurantManagement.TableManager.resources
-E:\Intern C#\RestaurantManagementWinform\RestaurantManagementWinform\RestaurantManagement\obj\Debug\RestaurantManagement.AccountProfile.resources
-E:\Intern C#\RestaurantManagementWinform\RestaurantManagementWinform\RestaurantManagement\obj\Debug\RestaurantManagement.Admin.resources
+E:\Intern C#\RestaurantManagementWinform\RestaurantManagementWinform\RestaurantManagement\obj\Debug\RestaurantManagement.fAccountProfile.resources
+E:\Intern C#\RestaurantManagementWinform\RestaurantManagementWinform\RestaurantManagement\obj\Debug\RestaurantManagement.fAdmin.resources
+E:\Intern C#\RestaurantManagementWinform\RestaurantManagementWinform\RestaurantManagement\obj\Debug\RestaurantManagement.fLogin.resources
+E:\Intern C#\RestaurantManagementWinform\RestaurantManagementWinform\RestaurantManagement\obj\Debug\RestaurantManagement.fTableManager.resources
