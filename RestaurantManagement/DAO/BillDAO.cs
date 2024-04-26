@@ -32,5 +32,22 @@ namespace RestaurantManagement.DAO
 
             return -1;
         }
+
+        public void InsertBill(int id)
+        {
+            DataProvider.Instance.ExecuteNonQuery("EXEC USP_InsertBill @idTable", new object[] { id });
+        }
+
+        public int GetMaxIDBill()
+        {
+            try
+            {
+                return (int)DataProvider.Instance.ExecuteScalar("SELECT MAX(id) FROM dbo.Bill");
+            }
+            catch
+            {
+                return 1;
+            }
+        }
     }
 }
