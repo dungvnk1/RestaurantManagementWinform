@@ -187,6 +187,7 @@
             this.btnSwitchTable.TabIndex = 6;
             this.btnSwitchTable.Text = "Chuyển bàn";
             this.btnSwitchTable.UseVisualStyleBackColor = true;
+            this.btnSwitchTable.Click += new System.EventHandler(this.btnSwitchTable_Click);
             // 
             // nmDiscount
             // 
@@ -204,6 +205,7 @@
             this.btnDiscount.TabIndex = 4;
             this.btnDiscount.Text = "Giảm giá";
             this.btnDiscount.UseVisualStyleBackColor = true;
+            this.btnDiscount.Click += new System.EventHandler(this.btnDiscount_Click);
             // 
             // btnCheckOut
             // 
@@ -213,6 +215,7 @@
             this.btnCheckOut.TabIndex = 3;
             this.btnCheckOut.Text = "Thanh toán";
             this.btnCheckOut.UseVisualStyleBackColor = true;
+            this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
             // 
             // panel4
             // 

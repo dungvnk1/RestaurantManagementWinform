@@ -1,6 +1,7 @@
 ﻿using RestaurantManagement.DTO;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -35,6 +36,11 @@ namespace RestaurantManagement.DAO
             }
 
             return tableList;
+        }
+
+        public void SwitchTable(int id1, int id2)
+        {
+            DataProvider.Instance.ExecuteQuery("USP_SwitchTable @idTable1 , @idTabel2", new object[] { id1, id2 });
         }
     }
 }
