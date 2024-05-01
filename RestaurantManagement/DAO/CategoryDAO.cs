@@ -35,5 +35,21 @@ namespace RestaurantManagement.DAO
 
             return list;
         }
+
+        public Category GetCategoryByID(int id)
+        {
+            Category category = null;
+
+            string query = "SELECT * FROM FoodCategory WHERE id = " + id;
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow row in data.Rows)
+            {
+                category = new Category(row);
+                return category;
+            }
+
+            return category;
+        }
     }
 }

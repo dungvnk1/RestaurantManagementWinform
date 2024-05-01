@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "E:\\Intern C#\\RestaurantManagementWinform\\RestaurantManagementWinform\\RestaurantManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D2A2B9ED-178B-4A22-9165-80D7CA1495D5}|RestaurantManagement.csproj|e:\\intern c#\\restaurantmanagementwinform\\restaurantmanagementwinform\\restaurantmanagement\\dao\\tabledao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2A2B9ED-178B-4A22-9165-80D7CA1495D5}|RestaurantManagement.csproj|solutionrelative:dao\\tabledao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D2A2B9ED-178B-4A22-9165-80D7CA1495D5}|RestaurantManagement.csproj|e:\\intern c#\\restaurantmanagementwinform\\restaurantmanagementwinform\\restaurantmanagement\\fadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2A2B9ED-178B-4A22-9165-80D7CA1495D5}|RestaurantManagement.csproj|solutionrelative:fadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2A2B9ED-178B-4A22-9165-80D7CA1495D5}|RestaurantManagement.csproj|e:\\intern c#\\restaurantmanagementwinform\\restaurantmanagementwinform\\restaurantmanagement\\ftablemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2A2B9ED-178B-4A22-9165-80D7CA1495D5}|RestaurantManagement.csproj|solutionrelative:ftablemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D2A2B9ED-178B-4A22-9165-80D7CA1495D5}|RestaurantManagement.csproj|e:\\intern c#\\restaurantmanagementwinform\\restaurantmanagementwinform\\restaurantmanagement\\fadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D2A2B9ED-178B-4A22-9165-80D7CA1495D5}|RestaurantManagement.csproj|solutionrelative:fadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2A2B9ED-178B-4A22-9165-80D7CA1495D5}|RestaurantManagement.csproj|e:\\intern c#\\restaurantmanagementwinform\\restaurantmanagementwinform\\restaurantmanagement\\ftablemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D2A2B9ED-178B-4A22-9165-80D7CA1495D5}|RestaurantManagement.csproj|solutionrelative:ftablemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D2A2B9ED-178B-4A22-9165-80D7CA1495D5}|RestaurantManagement.csproj|e:\\intern c#\\restaurantmanagementwinform\\restaurantmanagementwinform\\restaurantmanagement\\dao\\categorydao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2A2B9ED-178B-4A22-9165-80D7CA1495D5}|RestaurantManagement.csproj|solutionrelative:dao\\categorydao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2A2B9ED-178B-4A22-9165-80D7CA1495D5}|RestaurantManagement.csproj|e:\\intern c#\\restaurantmanagementwinform\\restaurantmanagementwinform\\restaurantmanagement\\dto\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2A2B9ED-178B-4A22-9165-80D7CA1495D5}|RestaurantManagement.csproj|solutionrelative:dto\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2A2B9ED-178B-4A22-9165-80D7CA1495D5}|RestaurantManagement.csproj|e:\\intern c#\\restaurantmanagementwinform\\restaurantmanagementwinform\\restaurantmanagement\\dao\\billdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2A2B9ED-178B-4A22-9165-80D7CA1495D5}|RestaurantManagement.csproj|solutionrelative:dao\\billdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D2A2B9ED-178B-4A22-9165-80D7CA1495D5}|RestaurantManagement.csproj|e:\\intern c#\\restaurantmanagementwinform\\restaurantmanagementwinform\\restaurantmanagement\\dao\\fooddao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2A2B9ED-178B-4A22-9165-80D7CA1495D5}|RestaurantManagement.csproj|solutionrelative:dao\\fooddao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,71 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Bill.cs",
-              "DocumentMoniker": "E:\\Intern C#\\RestaurantManagementWinform\\RestaurantManagementWinform\\RestaurantManagement\\DTO\\Bill.cs",
-              "RelativeDocumentMoniker": "DTO\\Bill.cs",
-              "ToolTip": "E:\\Intern C#\\RestaurantManagementWinform\\RestaurantManagementWinform\\RestaurantManagement\\DTO\\Bill.cs",
-              "RelativeToolTip": "DTO\\Bill.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAQwBgAAABAAAAA",
+              "DocumentIndex": 2,
+              "Title": "CategoryDAO.cs",
+              "DocumentMoniker": "E:\\Intern C#\\RestaurantManagementWinform\\RestaurantManagementWinform\\RestaurantManagement\\DAO\\CategoryDAO.cs",
+              "RelativeDocumentMoniker": "DAO\\CategoryDAO.cs",
+              "ToolTip": "E:\\Intern C#\\RestaurantManagementWinform\\RestaurantManagementWinform\\RestaurantManagement\\DAO\\CategoryDAO.cs",
+              "RelativeToolTip": "DAO\\CategoryDAO.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAAwCoAAABJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T09:18:22.11Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BillDAO.cs",
-              "DocumentMoniker": "E:\\Intern C#\\RestaurantManagementWinform\\RestaurantManagementWinform\\RestaurantManagement\\DAO\\BillDAO.cs",
-              "RelativeDocumentMoniker": "DAO\\BillDAO.cs",
-              "ToolTip": "E:\\Intern C#\\RestaurantManagementWinform\\RestaurantManagementWinform\\RestaurantManagement\\DAO\\BillDAO.cs",
-              "RelativeToolTip": "DAO\\BillDAO.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T09:18:14.187Z",
+              "WhenOpened": "2024-04-30T09:05:09.255Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TableDAO.cs",
-              "DocumentMoniker": "E:\\Intern C#\\RestaurantManagementWinform\\RestaurantManagementWinform\\RestaurantManagement\\DAO\\TableDAO.cs",
-              "RelativeDocumentMoniker": "DAO\\TableDAO.cs",
-              "ToolTip": "E:\\Intern C#\\RestaurantManagementWinform\\RestaurantManagementWinform\\RestaurantManagement\\DAO\\TableDAO.cs",
-              "RelativeToolTip": "DAO\\TableDAO.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAAQwCoAAAA/AAAA",
+              "Title": "fAdmin.cs",
+              "DocumentMoniker": "E:\\Intern C#\\RestaurantManagementWinform\\RestaurantManagementWinform\\RestaurantManagement\\fAdmin.cs",
+              "RelativeDocumentMoniker": "fAdmin.cs",
+              "ToolTip": "E:\\Intern C#\\RestaurantManagementWinform\\RestaurantManagementWinform\\RestaurantManagement\\fAdmin.cs",
+              "RelativeToolTip": "fAdmin.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAIwDIAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:35:10.606Z",
+              "WhenOpened": "2024-04-30T08:33:01.479Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "fTableManager.cs",
-              "DocumentMoniker": "E:\\Intern C#\\RestaurantManagementWinform\\RestaurantManagementWinform\\RestaurantManagement\\fTableManager.cs",
-              "RelativeDocumentMoniker": "fTableManager.cs",
-              "ToolTip": "E:\\Intern C#\\RestaurantManagementWinform\\RestaurantManagementWinform\\RestaurantManagement\\fTableManager.cs",
-              "RelativeToolTip": "fTableManager.cs",
-              "ViewState": "AQIAAJYAAAAAAAAAAAAYwKoAAABAAAAA",
+              "Title": "fAdmin.cs [Design]",
+              "DocumentMoniker": "E:\\Intern C#\\RestaurantManagementWinform\\RestaurantManagementWinform\\RestaurantManagement\\fAdmin.cs",
+              "RelativeDocumentMoniker": "fAdmin.cs",
+              "ToolTip": "E:\\Intern C#\\RestaurantManagementWinform\\RestaurantManagementWinform\\RestaurantManagement\\fAdmin.cs [Design]",
+              "RelativeToolTip": "fAdmin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T05:51:09.128Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-30T08:32:56.6Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "fTableManager.cs [Design]",
-              "DocumentMoniker": "E:\\Intern C#\\RestaurantManagementWinform\\RestaurantManagementWinform\\RestaurantManagement\\fTableManager.cs",
-              "RelativeDocumentMoniker": "fTableManager.cs",
-              "ToolTip": "E:\\Intern C#\\RestaurantManagementWinform\\RestaurantManagementWinform\\RestaurantManagement\\fTableManager.cs [Design]",
-              "RelativeToolTip": "fTableManager.cs [Design]",
+              "DocumentIndex": 3,
+              "Title": "FoodDAO.cs",
+              "DocumentMoniker": "E:\\Intern C#\\RestaurantManagementWinform\\RestaurantManagementWinform\\RestaurantManagement\\DAO\\FoodDAO.cs",
+              "RelativeDocumentMoniker": "DAO\\FoodDAO.cs",
+              "ToolTip": "E:\\Intern C#\\RestaurantManagementWinform\\RestaurantManagementWinform\\RestaurantManagement\\DAO\\FoodDAO.cs",
+              "RelativeToolTip": "DAO\\FoodDAO.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAwCkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T05:51:01.553Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-30T08:31:29.466Z",
+              "EditorCaption": ""
             }
           ]
         }

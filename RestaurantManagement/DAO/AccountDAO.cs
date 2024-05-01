@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestaurantManagement.DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -22,9 +23,27 @@ namespace RestaurantManagement.DAO
 
         public bool Login(string username, string password)
         {
-            string query = "USP_Login @username , @password";
+            string query = "EXEC USP_Login @username , @password";
             DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] {username, password});
             return result.Rows.Count > 0;
+        }
+
+        public Account GetAccountByUsername(string username)
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM Account WHERE UserName = '" + username +"'");
+
+            foreach (DataRow item in data.Rows)
+            {
+                return new Account(item);
+            }
+            return null;
+        }
+
+        public bool UpdateAccount(string username, string displayName, string password, string newPass)
+        {
+            int result = DataProvider.Instance.ExecuteNonQuery("EXEC USP_UpdateAccount @UserName , @DisplayName , @PassWord , @NewPassWord", new object[] { username, displayName, password, newPass });
+
+            return result > 0;
         }
     }
 }

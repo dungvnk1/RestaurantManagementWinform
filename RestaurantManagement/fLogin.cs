@@ -1,4 +1,5 @@
 ﻿using RestaurantManagement.DAO;
+using RestaurantManagement.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,7 +25,8 @@ namespace RestaurantManagement
             string password = txbPassWord.Text;
             if (Login(username,password))
             {
-                fTableManager m = new fTableManager();
+                Account loginAccount = AccountDAO.Instance.GetAccountByUsername(username);
+                fTableManager m = new fTableManager(loginAccount);
                 this.Hide();
                 m.ShowDialog();
                 this.Show();

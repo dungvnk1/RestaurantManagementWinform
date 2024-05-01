@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbUserName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txbDisplayName = new System.Windows.Forms.TextBox();
@@ -54,7 +54,7 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.txbUserName);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Location = new System.Drawing.Point(12, 12);
             this.panel3.Name = "panel3";
@@ -62,13 +62,13 @@
             this.panel3.TabIndex = 1;
             this.panel3.TabStop = true;
             // 
-            // textBox1
+            // txbUserName
             // 
-            this.textBox1.Location = new System.Drawing.Point(205, 14);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(322, 22);
-            this.textBox1.TabIndex = 1;
+            this.txbUserName.Location = new System.Drawing.Point(205, 14);
+            this.txbUserName.Name = "txbUserName";
+            this.txbUserName.ReadOnly = true;
+            this.txbUserName.Size = new System.Drawing.Size(322, 22);
+            this.txbUserName.TabIndex = 1;
             // 
             // label2
             // 
@@ -103,7 +103,7 @@
             this.label1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(193, 34);
+            this.label1.Size = new System.Drawing.Size(154, 27);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên hiển thị:";
             // 
@@ -131,7 +131,7 @@
             this.label3.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(12, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 34);
+            this.label3.Size = new System.Drawing.Size(121, 27);
             this.label3.TabIndex = 0;
             this.label3.Text = "Mật khẩu:";
             // 
@@ -159,7 +159,7 @@
             this.label4.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(12, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(211, 34);
+            this.label4.Size = new System.Drawing.Size(169, 27);
             this.label4.TabIndex = 0;
             this.label4.Text = "Mật khẩu mới:";
             // 
@@ -187,7 +187,7 @@
             this.label5.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(12, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(139, 34);
+            this.label5.Size = new System.Drawing.Size(111, 27);
             this.label5.TabIndex = 0;
             this.label5.Text = "Nhập lại:";
             // 
@@ -199,6 +199,7 @@
             this.btnUpdate.TabIndex = 6;
             this.btnUpdate.Text = "Cập nhật";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnExit
             // 
@@ -211,7 +212,7 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // AccountProfile
+            // fAccountProfile
             // 
             this.AcceptButton = this.btnUpdate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -225,7 +226,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
-            this.Name = "AccountProfile";
+            this.Name = "fAccountProfile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin cá nhân";
             this.panel3.ResumeLayout(false);
@@ -245,7 +246,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txbUserName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txbDisplayName;

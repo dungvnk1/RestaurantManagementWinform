@@ -15,16 +15,36 @@ namespace RestaurantManagement
 {
     public partial class fTableManager : Form
     {
-        public fTableManager()
+        private Account loginAccount;
+
+        public Account LoginAccount
+        {
+            get { return loginAccount; }
+            set { loginAccount = value; ChangeAccount(loginAccount.Type); }
+        }
+
+        public fTableManager(Account acc)
         {
             InitializeComponent();
 
+            this.LoginAccount = acc;
             LoadTable();
             LoadCategory();
             LoadComboBoxTable(cbSwitchTable);
         }
 
         #region Methods
+        void ChangeAccount(int type)
+        {
+            if(type == 1)
+            {
+                adminToolStripMenuItem.Enabled = true;
+            }
+            else adminToolStripMenuItem.Enabled = false;
+
+            thôngTinTàiKhoảnToolStripMenuItem.Text += " (" + LoginAccount.DisplayName + ")";
+        }
+
         void LoadTable()
         {
             flpTable.Controls.Clear();
@@ -111,8 +131,14 @@ namespace RestaurantManagement
 
         private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fAccountProfile m = new fAccountProfile();
+            fAccountProfile m = new fAccountProfile(LoginAccount);
+            m.UpdateDisplayAccount += m_UpdateDisplayAccount;
             m.ShowDialog(); 
+        }
+
+        void m_UpdateDisplayAccount(object sender, AccountEvent e)
+        {
+            thôngTinTàiKhoảnToolStripMenuItem.Text = "Thông tin tài khoản (" + e.Acc.DisplayName + ")";
         }
 
         private void adminToolStripMenuItem_Click(object sender, EventArgs e)
@@ -163,12 +189,14 @@ namespace RestaurantManagement
 
             int idBill = BillDAO.Instance.GetBillUncheckIDByTableID(table.ID);
             int discount = (int)nmDiscount.Value;
+            double totalPrice = (double)Convert.ToDouble(txbTotalPrice.Text.Replace(".", "").Split(',')[0]);
+            double finalPrice = totalPrice - (totalPrice / 100) * discount;
 
             if (idBill != -1)
             {
                 if(MessageBox.Show(string.Format("Bạn có chắc muốn thanh toán hóa đơn cho bàn {0}?",table.Name), "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
-                    BillDAO.Instance.CheckOut(idBill, discount);
+                    BillDAO.Instance.CheckOut(idBill, discount, (float)finalPrice);
                     ShowBill(table.ID );
 
                     LoadTable();

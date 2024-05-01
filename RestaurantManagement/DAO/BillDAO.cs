@@ -33,9 +33,9 @@ namespace RestaurantManagement.DAO
             return -1;
         }
 
-        public void CheckOut(int id, int discount)
+        public void CheckOut(int id, int discount, float totalPrice)
         {
-            string query = "UPDATE dbo.Bill SET status = 1, " + "discount = " + discount + " WHERE id = " + id;
+            string query = "UPDATE dbo.Bill SET DateCheckOut = GETDATE(), status = 1, " + "discount = " + discount + ", totalPrice = " + totalPrice + " WHERE id = " + id;
             DataProvider.Instance.ExecuteNonQuery(query);
         }
 
@@ -54,6 +54,11 @@ namespace RestaurantManagement.DAO
             {
                 return 1;
             }
+        }
+
+        public DataTable GetListBillByDate(DateTime checkIn,  DateTime checkOut)
+        {
+            return DataProvider.Instance.ExecuteQuery("EXEC USP_GetListBillByDate @checkIn , @checkOut", new object[] {checkIn, checkOut});
         }
     }
 }

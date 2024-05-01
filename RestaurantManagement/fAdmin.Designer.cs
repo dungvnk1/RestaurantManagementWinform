@@ -194,6 +194,7 @@
             this.btnViewBill.TabIndex = 1;
             this.btnViewBill.Text = "Thống kê";
             this.btnViewBill.UseVisualStyleBackColor = true;
+            this.btnViewBill.Click += new System.EventHandler(this.btnViewBill_Click);
             // 
             // dtpkToDate
             // 
@@ -211,6 +212,7 @@
             // 
             // dtgvBill
             // 
+            this.dtgvBill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvBill.Location = new System.Drawing.Point(6, 42);
             this.dtgvBill.Name = "dtgvBill";
@@ -345,6 +347,7 @@
             this.txbFoodID.ReadOnly = true;
             this.txbFoodID.Size = new System.Drawing.Size(316, 22);
             this.txbFoodID.TabIndex = 1;
+            this.txbFoodID.TextChanged += new System.EventHandler(this.txbFoodID_TextChanged);
             // 
             // label1
             // 
@@ -391,6 +394,7 @@
             // 
             // dtgvFood
             // 
+            this.dtgvFood.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvFood.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvFood.Location = new System.Drawing.Point(3, 3);
             this.dtgvFood.Name = "dtgvFood";
@@ -418,6 +422,7 @@
             this.btnShowFood.TabIndex = 3;
             this.btnShowFood.Text = "Xem";
             this.btnShowFood.UseVisualStyleBackColor = true;
+            this.btnShowFood.Click += new System.EventHandler(this.btnShowFood_Click);
             // 
             // btnEditFood
             // 
