@@ -432,6 +432,7 @@
             this.btnEditFood.TabIndex = 2;
             this.btnEditFood.Text = "Sửa";
             this.btnEditFood.UseVisualStyleBackColor = true;
+            this.btnEditFood.Click += new System.EventHandler(this.btnEditFood_Click);
             // 
             // btnDeleteFood
             // 
@@ -441,6 +442,7 @@
             this.btnDeleteFood.TabIndex = 1;
             this.btnDeleteFood.Text = "Xóa";
             this.btnDeleteFood.UseVisualStyleBackColor = true;
+            this.btnDeleteFood.Click += new System.EventHandler(this.btnDeleteFood_Click);
             // 
             // btnAddFood
             // 
@@ -450,6 +452,7 @@
             this.btnAddFood.TabIndex = 0;
             this.btnAddFood.Text = "Thêm";
             this.btnAddFood.UseVisualStyleBackColor = true;
+            this.btnAddFood.Click += new System.EventHandler(this.btnAddFood_Click);
             // 
             // tpFoodCategory
             // 
@@ -536,6 +539,7 @@
             // 
             // dtgvCategory
             // 
+            this.dtgvCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvCategory.Location = new System.Drawing.Point(3, 3);
             this.dtgvCategory.Name = "dtgvCategory";
@@ -563,6 +567,7 @@
             this.btnShowCategory.TabIndex = 3;
             this.btnShowCategory.Text = "Xem";
             this.btnShowCategory.UseVisualStyleBackColor = true;
+            this.btnShowCategory.Click += new System.EventHandler(this.btnShowCategory_Click);
             // 
             // btnEditCategory
             // 
@@ -572,6 +577,7 @@
             this.btnEditCategory.TabIndex = 2;
             this.btnEditCategory.Text = "Sửa";
             this.btnEditCategory.UseVisualStyleBackColor = true;
+            this.btnEditCategory.Click += new System.EventHandler(this.btnEditCategory_Click);
             // 
             // btnDeleteCategory
             // 
@@ -581,6 +587,7 @@
             this.btnDeleteCategory.TabIndex = 1;
             this.btnDeleteCategory.Text = "Xóa";
             this.btnDeleteCategory.UseVisualStyleBackColor = true;
+            this.btnDeleteCategory.Click += new System.EventHandler(this.btnDeleteCategory_Click);
             // 
             // btnAddCategory
             // 
@@ -590,6 +597,7 @@
             this.btnAddCategory.TabIndex = 0;
             this.btnAddCategory.Text = "Thêm";
             this.btnAddCategory.UseVisualStyleBackColor = true;
+            this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
             // 
             // tpTable
             // 
@@ -704,6 +712,7 @@
             // 
             // dtgvTable
             // 
+            this.dtgvTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvTable.Location = new System.Drawing.Point(3, 3);
             this.dtgvTable.Name = "dtgvTable";
@@ -740,6 +749,7 @@
             this.btnEditTable.TabIndex = 2;
             this.btnEditTable.Text = "Sửa";
             this.btnEditTable.UseVisualStyleBackColor = true;
+            this.btnEditTable.Click += new System.EventHandler(this.btnEditTable_Click);
             // 
             // btnDeleteTable
             // 
@@ -749,6 +759,7 @@
             this.btnDeleteTable.TabIndex = 1;
             this.btnDeleteTable.Text = "Xóa";
             this.btnDeleteTable.UseVisualStyleBackColor = true;
+            this.btnDeleteTable.Click += new System.EventHandler(this.btnDeleteTable_Click);
             // 
             // btnAddTable
             // 
@@ -758,6 +769,7 @@
             this.btnAddTable.TabIndex = 0;
             this.btnAddTable.Text = "Thêm";
             this.btnAddTable.UseVisualStyleBackColor = true;
+            this.btnAddTable.Click += new System.EventHandler(this.btnAddTable_Click);
             // 
             // tpAccount
             // 

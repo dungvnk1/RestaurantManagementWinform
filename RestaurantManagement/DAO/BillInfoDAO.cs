@@ -20,6 +20,11 @@ namespace RestaurantManagement.DAO
 
         private BillInfoDAO() { }   
 
+        public void DeleteBillInfoByFoodID(int id)
+        {
+            DataProvider.Instance.ExecuteQuery("DELETE BillInfo WHERE idFood = " + id);
+        }
+
         public List<BillInfo> GetListBillInfo(int id)
         {
             List<BillInfo> listBillInfo = new List<BillInfo>();

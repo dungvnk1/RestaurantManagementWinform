@@ -51,5 +51,35 @@ namespace RestaurantManagement.DAO
 
             return category;
         }
+
+        public bool InsertCategory(string name)
+        {
+            string query = string.Format("INSERT FoodCategory (name) VALUES (N'{0}')", name);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
+
+        public bool UpdateCategory(int id, string name)
+        {
+            string query = string.Format("UPDATE FoodCategory SET name = N'{0}' WHERE id = {1}", name, id);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
+
+        public bool DeleteCategory(int idCategory)
+        {
+            List<Food> listFood = FoodDAO.Instance.GetListFoodByCategoryID(idCategory);
+            foreach (Food item in listFood)
+            {
+                BillInfoDAO.Instance.DeleteBillInfoByFoodID(item.ID);
+            }
+            FoodDAO.Instance.DeleteFoodByCategoryID(idCategory);
+            string query = string.Format("DELETE FoodCategory WHERE id = {0}", idCategory);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
     }
 }

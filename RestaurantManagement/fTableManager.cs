@@ -144,7 +144,109 @@ namespace RestaurantManagement
         private void adminToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fAdmin m = new fAdmin();
+            m.InsertFood += M_InsertFood;
+            m.UpdateFood += M_UpdateFood;
+            m.DeleteFood += M_DeleteFood;
+            m.InsertCategory += M_InsertCategory;
+            m.UpdateCategory += M_UpdateCategory;
+            m.DeleteCategory += M_DeleteCategory;
+            m.InsertTable += M_InsertTable;
+            m.UpdateTable += M_UpdateTable;
+            m.DeleteTable += M_DeleteTable;
             m.ShowDialog();
+        }
+
+        private void M_DeleteTable(object sender, EventArgs e)
+        {
+            LoadTable();
+            LoadCategory();
+            LoadFoodListByCategoryID((cbCategory.SelectedItem as Category).ID);
+            if (lsvBill.Tag != null)
+            {
+                ShowBill((lsvBill.Tag as Table).ID);
+            }
+            LoadTable();
+        }
+
+        private void M_UpdateTable(object sender, EventArgs e)
+        {
+            LoadTable();
+            LoadCategory();
+            LoadFoodListByCategoryID((cbCategory.SelectedItem as Category).ID);
+            if (lsvBill.Tag != null)
+            {
+                ShowBill((lsvBill.Tag as Table).ID);
+            }
+        }
+
+        private void M_InsertTable(object sender, EventArgs e)
+        {
+            LoadTable();
+            LoadCategory();
+            LoadFoodListByCategoryID((cbCategory.SelectedItem as Category).ID);
+            if (lsvBill.Tag != null)
+            {
+                ShowBill((lsvBill.Tag as Table).ID);
+            }
+        }
+
+        private void M_DeleteCategory(object sender, EventArgs e)
+        {
+            LoadCategory();
+            LoadFoodListByCategoryID((cbCategory.SelectedItem as Category).ID);
+            if (lsvBill.Tag != null)
+            {
+                ShowBill((lsvBill.Tag as Table).ID);
+            }
+            LoadTable();
+        }
+
+        private void M_UpdateCategory(object sender, EventArgs e)
+        {
+            LoadCategory();
+            LoadFoodListByCategoryID((cbCategory.SelectedItem as Category).ID);
+            if (lsvBill.Tag != null)
+            {
+                ShowBill((lsvBill.Tag as Table).ID);
+            }
+        }
+
+        private void M_InsertCategory(object sender, EventArgs e)
+        {
+            LoadCategory();
+            LoadFoodListByCategoryID((cbCategory.SelectedItem as Category).ID);
+            if (lsvBill.Tag != null)
+            {
+                ShowBill((lsvBill.Tag as Table).ID);
+            }
+        }
+
+        private void M_DeleteFood(object sender, EventArgs e)
+        {
+            LoadFoodListByCategoryID((cbCategory.SelectedItem as Category).ID);
+            if (lsvBill.Tag != null)
+            {
+                ShowBill((lsvBill.Tag as Table).ID);
+            }
+            LoadTable();
+        }
+
+        private void M_UpdateFood(object sender, EventArgs e)
+        {
+            LoadFoodListByCategoryID((cbCategory.SelectedItem as Category).ID);
+            if (lsvBill.Tag != null)
+            {
+                ShowBill((lsvBill.Tag as Table).ID);
+            }
+        }
+
+        private void M_InsertFood(object sender, EventArgs e)
+        {
+            LoadFoodListByCategoryID((cbCategory.SelectedItem as Category).ID);
+            if(lsvBill.Tag != null)
+            {
+                ShowBill((lsvBill.Tag as Table).ID);
+            }
         }
 
         private void cbCategory_SelectedIndexChanged(object sender, EventArgs e)
@@ -164,6 +266,12 @@ namespace RestaurantManagement
         private void btnAddFood_Click(object sender, EventArgs e)
         {
             Table table = lsvBill.Tag as Table;
+
+            if(table == null)
+            {
+                MessageBox.Show("Hãy chọn bàn để thêm món!");
+                return;
+            }
             int idBill = BillDAO.Instance.GetBillUncheckIDByTableID(table.ID);
             int foodID = (cbFood.SelectedItem as Food).ID;
             int count = (int)nmFoodCount.Value;
