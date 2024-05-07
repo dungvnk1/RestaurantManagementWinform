@@ -144,6 +144,7 @@ namespace RestaurantManagement
         private void adminToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fAdmin m = new fAdmin();
+            m.loginAccount = LoginAccount;
             m.InsertFood += M_InsertFood;
             m.UpdateFood += M_UpdateFood;
             m.DeleteFood += M_DeleteFood;

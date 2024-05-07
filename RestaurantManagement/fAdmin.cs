@@ -3,6 +3,7 @@ using RestaurantManagement.DTO;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace RestaurantManagement
 {
@@ -11,6 +12,10 @@ namespace RestaurantManagement
         BindingSource foodList = new BindingSource();
         BindingSource categoryList = new BindingSource();
         BindingSource tableList = new BindingSource();
+        BindingSource accountList = new BindingSource();
+
+        public Account loginAccount;
+
         public fAdmin()
         {
             InitializeComponent();
@@ -24,18 +29,21 @@ namespace RestaurantManagement
             dtgvFood.DataSource = foodList;
             dtgvCategory.DataSource = categoryList;
             dtgvTable.DataSource = tableList;
+            dtgvAccount.DataSource = accountList;
 
             LoadDatetimePickerBill();
             LoadListByDate(dtpkFromDate.Value, dtpkToDate.Value);
             LoadListFood();
             LoadListCategory();
             LoadListTable();
+            LoadAccount();
 
             LoadCategoryIntoCombobox(cbFoodCategory);
             LoadTableStatusIntoComboBox(cbTableStatus);
             AddFoodBinding();
             AddCategoryBinding();
             AddTableBinding();
+            AddAccountBinding();
         }
 
         void LoadDatetimePickerBill()
@@ -74,6 +82,13 @@ namespace RestaurantManagement
             cbTableStatus.DataBindings.Add(new Binding("Text", dtgvTable.DataSource, "Status", true, DataSourceUpdateMode.Never));
         }
 
+        void AddAccountBinding()
+        {
+            txbUserName.DataBindings.Add(new Binding("Text", dtgvAccount.DataSource, "UserName", true, DataSourceUpdateMode.Never));
+            txbDisplayName.DataBindings.Add(new Binding("Text", dtgvAccount.DataSource, "DisplayName", true, DataSourceUpdateMode.Never));
+            nmAccountType.DataBindings.Add(new Binding("Value", dtgvAccount.DataSource, "Type", true, DataSourceUpdateMode.Never));
+        }
+
         void LoadCategoryIntoCombobox(ComboBox cb)
         {
             cb.DataSource = CategoryDAO.Instance.GetListCategory();
@@ -106,6 +121,67 @@ namespace RestaurantManagement
             List<Food> listSearchFood = FoodDAO.Instance.SearchFoodByName(name);
 
             return listSearchFood;
+        }
+
+        void LoadAccount()
+        {
+            accountList.DataSource = AccountDAO.Instance.GetListAccount();
+        }
+
+        void AddAccount(string username, string displayName, int type)
+        {
+            if (AccountDAO.Instance.InsertAccount(username, displayName, type))
+            {
+                MessageBox.Show("Thêm tài khoản thành công!");
+            }
+            else
+            {
+                MessageBox.Show("Thêm tài khoản thất bại!");
+            }
+            LoadAccount();
+        }
+
+        void EditAccount(string username, string displayName, int type)
+        {
+            if (AccountDAO.Instance.UpdateAccount(username, displayName, type))
+            {
+                MessageBox.Show("Sửa tài khoản thành công!");
+            }
+            else
+            {
+                MessageBox.Show("Sửa tài khoản thất bại!");
+            }
+            LoadAccount();
+        }
+
+        void DeleteAccount(string username)
+        {
+            if (loginAccount.UserName.Equals(username))
+            {
+                MessageBox.Show("Không thể xóa tài khoản hiện tại!");
+                return;
+            }
+            if (AccountDAO.Instance.DeleteAccount(username))
+            {
+                MessageBox.Show("Xóa tài khoản thành công!");
+            }
+            else
+            {
+                MessageBox.Show("Xóa tài khoản thất bại!");
+            }
+            LoadAccount();
+        }
+
+        void ResetPassword(string name)
+        {
+            if (AccountDAO.Instance.ResetPassword(name))
+            {
+                MessageBox.Show("Đặt lại mật khẩu thành công!");
+            }
+            else
+            {
+                MessageBox.Show("Đặt lại mật khẩu thất bại!");
+            }
         }
         #endregion
 
@@ -351,6 +427,39 @@ namespace RestaurantManagement
         {
             foodList.DataSource = SearchFoodByName(txbSearchFoodName.Text);
         }
+
+        private void btnShowAccount_Click(object sender, EventArgs e)
+        {
+            LoadAccount();
+        }
+
+        private void btnAddAccount_Click(object sender, EventArgs e)
+        {
+            string username = txbUserName.Text;
+            string displayName = txbDisplayName.Text;
+            int type = (int)nmAccountType.Value;
+            AddAccount(username, displayName, type);
+        }
+
+        private void btnDeleteAccount_Click(object sender, EventArgs e)
+        {
+            string username = txbUserName.Text;
+            DeleteAccount(username);
+        }
+
+        private void btnEditAccount_Click(object sender, EventArgs e)
+        {
+            string username = txbUserName.Text;
+            string displayName = txbDisplayName.Text;
+            int type = (int)nmAccountType.Value;
+            EditAccount(username, displayName, type);
+        }
+
+        private void btnResetPassword_Click(object sender, EventArgs e)
+        {
+            string username = txbUserName.Text;
+            ResetPassword(username);
+        }
         #endregion
 
 
@@ -413,6 +522,7 @@ namespace RestaurantManagement
             add { deleteTable += value; }
             remove { deleteTable -= value; }
         }
+
         #endregion
 
     }

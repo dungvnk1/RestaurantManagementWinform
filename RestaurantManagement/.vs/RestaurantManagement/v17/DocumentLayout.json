@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "E:\\Intern C#\\RestaurantManagementWinform\\RestaurantManagementWinform\\RestaurantManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D2A2B9ED-178B-4A22-9165-80D7CA1495D5}|RestaurantManagement.csproj|e:\\intern c#\\restaurantmanagementwinform\\restaurantmanagementwinform\\restaurantmanagement\\dao\\fooddao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2A2B9ED-178B-4A22-9165-80D7CA1495D5}|RestaurantManagement.csproj|solutionrelative:dao\\fooddao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D2A2B9ED-178B-4A22-9165-80D7CA1495D5}|RestaurantManagement.csproj|e:\\intern c#\\restaurantmanagementwinform\\restaurantmanagementwinform\\restaurantmanagement\\dao\\accountdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2A2B9ED-178B-4A22-9165-80D7CA1495D5}|RestaurantManagement.csproj|solutionrelative:dao\\accountdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2A2B9ED-178B-4A22-9165-80D7CA1495D5}|RestaurantManagement.csproj|e:\\intern c#\\restaurantmanagementwinform\\restaurantmanagementwinform\\restaurantmanagement\\fadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2A2B9ED-178B-4A22-9165-80D7CA1495D5}|RestaurantManagement.csproj|solutionrelative:fadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D2A2B9ED-178B-4A22-9165-80D7CA1495D5}|RestaurantManagement.csproj|e:\\intern c#\\restaurantmanagementwinform\\restaurantmanagementwinform\\restaurantmanagement\\flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2A2B9ED-178B-4A22-9165-80D7CA1495D5}|RestaurantManagement.csproj|solutionrelative:flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2A2B9ED-178B-4A22-9165-80D7CA1495D5}|RestaurantManagement.csproj|e:\\intern c#\\restaurantmanagementwinform\\restaurantmanagementwinform\\restaurantmanagement\\fadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D2A2B9ED-178B-4A22-9165-80D7CA1495D5}|RestaurantManagement.csproj|solutionrelative:fadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D2A2B9ED-178B-4A22-9165-80D7CA1495D5}|RestaurantManagement.csproj|e:\\intern c#\\restaurantmanagementwinform\\restaurantmanagementwinform\\restaurantmanagement\\flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D2A2B9ED-178B-4A22-9165-80D7CA1495D5}|RestaurantManagement.csproj|solutionrelative:flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,39 +27,39 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FoodDAO.cs",
-              "DocumentMoniker": "E:\\Intern C#\\RestaurantManagementWinform\\RestaurantManagementWinform\\RestaurantManagement\\DAO\\FoodDAO.cs",
-              "RelativeDocumentMoniker": "DAO\\FoodDAO.cs",
-              "ToolTip": "E:\\Intern C#\\RestaurantManagementWinform\\RestaurantManagementWinform\\RestaurantManagement\\DAO\\FoodDAO.cs",
-              "RelativeToolTip": "DAO\\FoodDAO.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAADEAAAANAAAA",
+              "Title": "AccountDAO.cs",
+              "DocumentMoniker": "E:\\Intern C#\\RestaurantManagementWinform\\RestaurantManagementWinform\\RestaurantManagement\\DAO\\AccountDAO.cs",
+              "RelativeDocumentMoniker": "DAO\\AccountDAO.cs",
+              "ToolTip": "E:\\Intern C#\\RestaurantManagementWinform\\RestaurantManagementWinform\\RestaurantManagement\\DAO\\AccountDAO.cs",
+              "RelativeToolTip": "DAO\\AccountDAO.cs",
+              "ViewState": "AQIAADoAAAAAAAAAAAAkwEcAAACEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T01:09:25.593Z",
+              "WhenOpened": "2024-05-07T13:28:56.286Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "fAdmin.cs",
-              "DocumentMoniker": "E:\\Intern C#\\RestaurantManagementWinform\\RestaurantManagementWinform\\RestaurantManagement\\fAdmin.cs",
-              "RelativeDocumentMoniker": "fAdmin.cs",
-              "ToolTip": "E:\\Intern C#\\RestaurantManagementWinform\\RestaurantManagementWinform\\RestaurantManagement\\fAdmin.cs",
-              "RelativeToolTip": "fAdmin.cs",
-              "ViewState": "AQIAAFIAAAAAAAAAAAAiwF8AAABNAAAA",
+              "Title": "fLogin.cs",
+              "DocumentMoniker": "E:\\Intern C#\\RestaurantManagementWinform\\RestaurantManagementWinform\\RestaurantManagement\\fLogin.cs",
+              "RelativeDocumentMoniker": "fLogin.cs",
+              "ToolTip": "E:\\Intern C#\\RestaurantManagementWinform\\RestaurantManagementWinform\\RestaurantManagement\\fLogin.cs",
+              "RelativeToolTip": "fLogin.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAnwBoAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T01:04:27.289Z",
+              "WhenOpened": "2024-05-07T13:27:57.044Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "fAdmin.cs [Design]",
-              "DocumentMoniker": "E:\\Intern C#\\RestaurantManagementWinform\\RestaurantManagementWinform\\RestaurantManagement\\fAdmin.cs",
-              "RelativeDocumentMoniker": "fAdmin.cs",
-              "ToolTip": "E:\\Intern C#\\RestaurantManagementWinform\\RestaurantManagementWinform\\RestaurantManagement\\fAdmin.cs [Design]",
-              "RelativeToolTip": "fAdmin.cs [Design]",
+              "Title": "fLogin.cs [Design]",
+              "DocumentMoniker": "E:\\Intern C#\\RestaurantManagementWinform\\RestaurantManagementWinform\\RestaurantManagement\\fLogin.cs",
+              "RelativeDocumentMoniker": "fLogin.cs",
+              "ToolTip": "E:\\Intern C#\\RestaurantManagementWinform\\RestaurantManagementWinform\\RestaurantManagement\\fLogin.cs [Design]",
+              "RelativeToolTip": "fLogin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T01:04:18.238Z",
+              "WhenOpened": "2024-05-07T13:27:55.529Z",
               "EditorCaption": " [Design]"
             }
           ]
