@@ -100,6 +100,13 @@ namespace RestaurantManagement
         {
             tableList.DataSource = TableDAO.Instance.LoadTableList();
         }
+
+        List<Food> SearchFoodByName(string name)
+        {
+            List<Food> listSearchFood = FoodDAO.Instance.SearchFoodByName(name);
+
+            return listSearchFood;
+        }
         #endregion
 
         #region Events
@@ -108,37 +115,43 @@ namespace RestaurantManagement
             LoadListByDate(dtpkFromDate.Value, dtpkToDate.Value);
         }
 
-        private void btnShowFood_Click(object sender, EventArgs e)
-        {
-            LoadListFood();
-        }
 
         //select category.name changed base on category id was chose
         private void txbFoodID_TextChanged(object sender, EventArgs e)
         {
-            if (dtgvFood.SelectedCells.Count > 0)
+            try
             {
-                int id = (int)dtgvFood.SelectedCells[0].OwningRow.Cells["CategoryID"].Value;
-
-                Category category = CategoryDAO.Instance.GetCategoryByID(id);
-
-                cbFoodCategory.SelectedItem = category;
-
-                int index = -1;
-                int i = 0;
-
-                foreach (Category item in cbFoodCategory.Items)
+                if (dtgvFood.SelectedCells.Count > 0)
                 {
-                    if (item.ID == category.ID)
-                    {
-                        index = i;
-                        break;
-                    }
-                    i++;
-                }
+                    int id = (int)dtgvFood.SelectedCells[0].OwningRow.Cells["CategoryID"].Value;
 
-                cbFoodCategory.SelectedIndex = index;
+                    Category category = CategoryDAO.Instance.GetCategoryByID(id);
+
+                    cbFoodCategory.SelectedItem = category;
+
+                    int index = -1;
+                    int i = 0;
+
+                    foreach (Category item in cbFoodCategory.Items)
+                    {
+                        if (item.ID == category.ID)
+                        {
+                            index = i;
+                            break;
+                        }
+                        i++;
+                    }
+
+                    cbFoodCategory.SelectedIndex = index;
+                }
             }
+            catch { }
+        }
+
+        private void btnShowFood_Click(object sender, EventArgs e)
+        {
+            LoadListFood();
+            txbSearchFoodName.Text = "";
         }
 
         private void btnAddFood_Click(object sender, EventArgs e)
@@ -272,6 +285,11 @@ namespace RestaurantManagement
             }
         }
 
+        private void btnShowTable_Click(object sender, EventArgs e)
+        {
+            LoadListTable();
+        }
+
         private void btnAddTable_Click(object sender, EventArgs e)
         {
             if (TableDAO.Instance.InsertTable())
@@ -327,6 +345,11 @@ namespace RestaurantManagement
             {
                 MessageBox.Show("Có lỗi khi xóa bàn!");
             }
+        }
+
+        private void btnSearchFood_Click(object sender, EventArgs e)
+        {
+            foodList.DataSource = SearchFoodByName(txbSearchFoodName.Text);
         }
         #endregion
 

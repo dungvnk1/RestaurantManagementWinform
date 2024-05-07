@@ -52,6 +52,22 @@ namespace RestaurantManagement.DAO
             return list;
         }
 
+        public List<Food> SearchFoodByName(string name)
+        {
+            List<Food> list = new List<Food>();
+
+            string query = string.Format("SELECT * FROM Food WHERE dbo.fuConvertToUnsign1(name) LIKE N'%' + dbo.fuConvertToUnsign1(N'{0}') + '%'", name);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow row in data.Rows)
+            {
+                Food food = new Food(row);
+                list.Add(food);
+            }
+
+            return list;
+        }
+
         public void DeleteFoodByCategoryID(int id)
         {
             DataProvider.Instance.ExecuteQuery("DELETE Food WHERE idCategory = " + id);
